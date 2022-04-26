@@ -1,0 +1,94 @@
+{% extends   'main/create.html' %}
+{% block css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'main/css/winter.css' %}">
+{% endblock %}
+{% block title %}
+Summer sports
+{% endblock %}
+
+{% block content %}
+   <div class="container">
+        <h1>Қазақстанда  жазғы cпорт ойындары </h1>
+        <div class="Information">
+            <div>
+
+            <p style="text-align: center;margin-top: 20px;font-size: 36px;">Жазғы Олимпиададағы Тәуелсіз Қазақстан</p>
+            <P style="margin-left:40px;">1992 жылғы Жазғы Олимпиада ойындарында да Қазақстан спортшылары Біріккен команда құрамына енді. Бүгінге дейін ел қоржынына спорттың жазғы түрлері бойынша 58 олимпиада медалі мен спорттың қысқы түрлері бойынша 6 медаль түскен.</P>
+            <P style="margin-left:40px;">Күні кеше аяқталған Лондон Олимпиадасы қазақ елі үшін жемісті болды. Бұрын-соңды отандық спортшылар мұндай жоғары жетістіктерге қол жеткізбеген еді. Бүгін тарихқа көз жүгіртіп, ел намысын қолдан бермеген, көк байрағымызды көкке көтерткен толағайларымызбен қайта қауышсақ. </P>
+            </div>
+                <div>
+                      <img src="{% static 'main/img/106.jpg' %}" >
+                  </div>
+
+        </div>
+       <div class="row">
+            <div class="col">
+                <div class="block">
+                    <img src="{% static 'main/img/104.jpg' %}" >
+                    <div class="block_text_1">
+                        <div class="block_title">Бокс</div>
+                        <div class="block_text">Қазақстанда бокстың алғашқы мектебін 20 ғасырдың 30-жылдары Алматыда Шоқыр Бөлтекұлы ашты. Қазақстаннан Олимпия ойындарының, Дүние жүзі, Азия, Еуропа чемпионаттарының, Азия ойындарының 30-ға жуық чемпиондары мен жүлдегерлері шықты.  </div>
+                    </div>
+
+                </div>
+                <div class="block">
+                    <img src="{% static 'main/img/107.jpg' %}" >
+                    <div class="block_text_1">
+                        <div class="block_title">Жеңіл атлетика</div>
+                        <div class="block_text">Жеңіл атлетика, спорттың ең көп тараған түрі. Оған әр түрлі қашықтықта жүгіру мен жүру, ұзындық пен биіктікке секіру, спорттық снарядтарды лақтыру, жеңіл атлетикалық көпсайыстар енеді. Жеңіл атлетикалық жарыстар ашық және жабық (манеж) алаңдарда өтетеді  </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="block">
+                <img src="{% static 'main/img/108.jpg' %}" >
+                     <div class="block_text_1">
+                        <div class="block_title">Велоспорт</div>
+                        <div class="block_text"> Велоспорттан велоспорттан Қазақстан чемпионаты - бұл велоспорттан Қазақстанның ұлттық чемпионаты.Әдетте ол жыл сайын маусым айының соңында өткізіледі. Чемпионат аясында келесілер өткізіледі: топтық жарыс және кәсіби ерлер арасында жеке разряд </div>
+                    </div>
+
+                </div>
+                <div class="block">
+                   <img src="{% static 'main/img/109.jpg' %}" >
+                    <div class="block_text_1">
+                        <div class="block_title">Жеңіл атлетика</div>
+                        <div class="block_text">Жеңіл атлетика, спорттың ең көп тараған түрі. Оған әр түрлі қашықтықта жүгіру мен жүру, ұзындық пен биіктікке секіру, спорттық снарядтарды лақтыру, жеңіл атлетикалық көпсайыстар енеді. Жеңіл атлетикалық жарыстар ашық және жабық (манеж) алаңдарда өтетеді  </div>
+                    </div>
+                </div>
+</div>
+        </div>
+        <H2>Спорт бойынша медальдар  </H2>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Ойындар</th>
+                <th scope="col">Алтын</th>
+                <th scope="col">Күміс</th>
+                <th scope="col">Қола</th>
+                <th>Барлығы</th>
+              </tr>
+            </thead>
+            <tbody>
+         {%for i in summer%}
+              <tr>
+                  <td>
+                      {{i.name}}
+                  </td>
+                  <td>
+                      {{i.gold}}
+                  </td>
+                  <td>
+                      {{i.silver}}
+                  </td>
+                  <td>
+                      {{i.bronze}}
+                  </td>
+                  <td>
+                      {{i.overall}}
+                  </td>
+              </tr>
+                 {% endfor %}
+            </tbody>
+          </table>
+{% endblock %}

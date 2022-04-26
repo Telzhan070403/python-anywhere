@@ -1,0 +1,15 @@
+{% extends   'main/create.html' %}
+{% block title %}
+News
+{% endblock %}
+{% block content %}
+ {% for el in news %}
+<div  class="p-3= mb-2 bg-dark text-white text-center">
+         <br> <h3>{{ el.title }}</h3> <br>
+                <p>{{ el.news }}</p><br>
+   <a href="{% url 'news-detail' el.id %} "><button class="btn btn-warning">Жаңалықты өзгерту</button></a><br><br>
+
+</div>
+ {% endfor %}
+
+{% endblock %}

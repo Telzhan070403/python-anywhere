@@ -1,0 +1,14 @@
+{% extends   'main/create.html' %}
+{% block title %}
+News
+{% endblock %}
+{% block content %}
+ {% for el in news %}
+<div  class="p-3= mb-2 bg-dark text-white text-center">
+     <p>Cәтті тіркелідің</p>
+         <br> <h3>{{ el.name }}</h3> <br>
+
+</div>
+ {% endfor %}
+
+{% endblock %}

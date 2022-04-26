@@ -1,0 +1,16 @@
+  .er{
+      align-items: center;
+  }
+    img{
+        width: 250px;
+        height: 280px;
+        margin: 0.7rem;
+
+    }
+    p{
+        font-size: 14px;
+        display: inline-block;
+    }
+    .tak{
+        margin-left: 62rem;
+    }

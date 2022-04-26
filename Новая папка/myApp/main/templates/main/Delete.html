@@ -1,0 +1,13 @@
+{% extends   'main/create.html' %}
+{% block title %}
+News delete
+{% endblock %}
+{% block content %}
+  <div class="features">
+      <h1>Жаңалықты жою </h1><br>
+      <form method="post" >
+          {% csrf_token %}
+          <button type="submit" class="btn btn-danger">жою</button>
+      </form>
+  </div>
+{% endblock %}
