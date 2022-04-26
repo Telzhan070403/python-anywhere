@@ -58,5 +58,5 @@ class RegisterUserForm(UserCreationForm):
 class EmailForm(forms.Form):
     email = forms.EmailField(label='Пайдаланушы аты')
     subject = forms.CharField(max_length=100)
-    attach = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True}))
+    attach = forms.FileField(blank=True, widget=forms.ClearableFileInput(attrs={'multiple': True}))
     message = forms.CharField(widget=forms.Textarea)
